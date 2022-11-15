@@ -1,69 +1,86 @@
 <?php
 session_start();
 include 'config/db.php';
+include 'config/functions.php';
 $msg="";
 
 
+if(isset($_SESSION['email'])){
+		header('Location: chef_page.php');
+}
+
 if(isset($_POST['submit'])){
 
-$_SESSION['email'] = $_POST['email'];
-$password = $_POST['password'];
+		$email = $_POST['email'];
+		$password = $_POST['password'];
 
 
-if($_SESSION['email']&&$password){
-  
-  
-  
- 
-  $sql= mysqli_query($connection,"SELECT * FROM chefs WHERE email='".$_SESSION['email']."'");
-  
-  $numrows=(mysqli_num_rows($sql));
-  
-  if($numrows !=0)
-  {
-    
-    while($row=mysqli_fetch_array($sql))
-    {
-      
-    $dbuser=$row["email"];
-    $dbpass=$row["password"];
-    $_SESSION['chef']=$row["chef_id"];
-    $_SESSION['pic']=$row["picture"];
-    $_SESSION['phone']=$row["phone"];
-      
-    }
+		if($email&&$password){
 
-    
-    if($_SESSION['email']==$dbuser)
-    {
-      
-      if($password==$dbpass)
-      {
+			$login = login($connection,$email,$password,'chef');
 
-        header("location: chef_page.php");
- 
-        
-      }else{
-        
-        $msg="<p class='alert alert-danger text-center animated shake'>Incorrect password</p>";
-      
-      }
-      
-      
-    }else{
-      
-      $msg="<p class='alert alert-danger text-center animated shake'>Incorrect Email Address</p>";
-      
-      }
-  }else {
+			if($login){
+				$chef_id = getChef($connection,'chefs','email',$email);
+				$_SESSION['chef_id'] = $chef_id['chef_id'];
+				header("location: chef_page.php");
+			}
 
-      $msg="<p class='alert alert-danger text-center animated shake'>Incorrect Email or password</p>"; 
-      
-    
-  }
-  
-  
-}
+		}
+
+		
+
+		/*if($email&&$password){
+		  
+		 
+		  $sql= mysqli_query($connection,"SELECT * FROM chefs WHERE email='$email' ");
+		  
+		  $numrows=(mysqli_num_rows($sql));
+		  
+		  if($numrows !=0)
+		  {
+		    
+		    while($row=mysqli_fetch_array($sql))
+		    {
+		     
+		    $dbuser=$row["email"];
+		    $dbpass=$row["password"];
+		    $_SESSION['chef']=$row["chef_id"];
+		    $_SESSION['pic']=$row["picture"];
+		    $_SESSION['phone']=$row["phone"];
+		      
+		    }
+
+		    
+		    if($_SESSION['email']==$dbuser)
+		    {
+		      
+		      if($password==$dbpass)
+		      {
+		      
+		        header("location: chef_page.php");
+		 
+		        
+		      }else{
+		        
+		        $msg="<p class='alert alert-danger text-center animated shake'>Incorrect password</p>";
+		      
+		      }
+		      
+		      
+		    }else{
+		      
+		      $msg="<p class='alert alert-danger text-center animated shake'>Incorrect Email Address</p>";
+		      
+		      }
+		  }else {
+
+		      $msg="<p class='alert alert-danger text-center animated shake'>Incorrect Email or password</p>"; 
+		      
+		    
+		  }
+		  
+		  
+		}*/
 }
 
 

@@ -121,39 +121,6 @@
 			</div>	<!-- End of /.row -->
 		</div>	<!-- End of /.Container -->
 	</section> <!-- End of /.Single-product -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<!-- FOOTER Start
     ================================================== -->
 
@@ -195,7 +162,7 @@
 								</a>
 							</li>
 						</ul>
-						<p class="copyright-text pull-right">Food Recipe @2021 Designed by <a href="">HANNATU JATAU HASSAN</a> All Rights Reserved</p>
+						<p class="copyright-text pull-right">Food Recipe @2022 Designed by <a href="">Bahijjah Tech-Solution</a> All Rights Reserved</p>
 					</div>	<!-- End Of /.col-md-12 -->	
 				</div>	<!-- End Of /.row -->	
 			</div>	<!-- End Of /.container -->	

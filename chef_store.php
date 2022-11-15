@@ -73,7 +73,7 @@
 							<div class="row">
 								<?php
 				                  require_once('config/db.php');
-				                  $query = mysqli_query($connection, "SELECT * FROM dishes WHERE chef_id = '".$_SESSION['chef']."' ");
+				                  $query = mysqli_query($connection, "SELECT * FROM dishes WHERE chef_id = '".$_SESSION['chef_id']."' ");
 				                  while($row = mysqli_fetch_array($query,MYSQLI_ASSOC)){
 				                    ?>                           
 								<div class="col-md-3">

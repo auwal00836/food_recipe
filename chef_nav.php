@@ -1,7 +1,6 @@
 <?php
-
 include 'config/db.php';
-$query = mysqli_query($connection, "SELECT * FROM chefs WHERE chef_id='".$_SESSION['chef']."'");
+$query = mysqli_query($connection, "SELECT * FROM chefs WHERE chef_id='{$_SESSION['chef_id']}'");
     
     while($row = mysqli_fetch_array($query,MYSQLI_ASSOC)){
 

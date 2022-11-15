@@ -55,22 +55,22 @@
 						<h4>UPCOMING ITEMS</h4>
 						<div class="media">
 						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="images/product-item.jpg" alt="...">
+						    	<img class="media-object" src="images/ewa_plantain.jpg" alt="...">
 						  	</a>
 						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="images/product-item.jpg" alt="...">
+						    	<img class="media-object" src="images/alale1.jpg" alt="...">
 						  	</a>
 						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="images/product-item.jpg" alt="...">
+						    	<img class="media-object" src="images/fried_plantain.jpg" alt="...">
 						  	</a>
 						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="images/product-item.jpg" alt="...">
+						    	<img class="media-object" src="images/zogale.jpg" alt="...">
 						  	</a>
 						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="images/product-item.jpg" alt="...">
+						    	<img class="media-object" src="images/amala.jpg" alt="...">
 						  	</a>
 						  	<a class="pull-left" href="#">
-						    	<img class="media-object" src="images/product-item.jpg" alt="...">
+						    	<img class="media-object" src="images/waina.jpg" alt="...">
 						  	</a>
 						</div>	<!-- End Of /.media -->
 					</div>	<!-- End Of /.block -->

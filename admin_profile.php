@@ -62,6 +62,7 @@
 									                <tr>
 									                  <th>Admin Name</th>
 									                  <th>Username</th>
+									                  
 									                  <!-- <th>Picture</th> -->
 									                 <!--  <th>Action</th> -->
 									                </tr>
@@ -81,12 +82,9 @@
 									                <tr>
 									                  <td><?php echo $row["name"]; ?></td>
 									                  <td><?php echo $row["username"]; ?></td>
-									                  <!--  <td align="center"><a href="images/<?php echo $row['picture']; ?>"  class="btn btn-sm btn-primary fa fa-xs  fa-image"  ><strong style="font-size: 12px;"> View Picture</strong></a></td> -->
-
 
 									          
-									                    <!-- <td align="center"><a href="delete_admin.php?id=<?php echo $row['id']; ?>"  onClick= "return confirm('Are you sure you want to delete record?')" class="btn  btn-sm btn-danger fa  fa-trash fa-xs" ><strong style="font-size: 12px;"> Delete</strong></a></td>
- -->
+									                  
 									                </tr>
 									                <?php
 									                  }

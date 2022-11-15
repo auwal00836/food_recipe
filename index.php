@@ -8,7 +8,7 @@
 
 <!-- TOP HEADER Start
     ================================================== -->
-		<?php include'header.php';?>
+		<?php //include'header.php';?>
 	
 	
 	<!-- MODAL Start

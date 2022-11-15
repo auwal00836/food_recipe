@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,23 +10,18 @@
 <!-- TOP HEADER Start
     ================================================== -->
 		<?php include'chef_head.php';?>
-	
-	
 	<!-- MODAL Start
     	================================================== -->
-
-		<?php include'user_login.php';?>
-
 	<!-- LOGO Start
     ================================================== -->
 	
 		<?php include'logo.php';?>
+		<?php include'chef_nav.php';?>
 
 
 	<!-- MENU Start
     ================================================== -->
 
-		<?php include'chef_nav.php';?>
 
 
 <!-- breadcrumb Start
@@ -108,7 +104,7 @@
 					             
 
 					    $query = mysqli_query($connection, "SELECT count(*) FROM dishes
-						      WHERE chef_id='".$_SESSION['chef']."'");
+						      WHERE chef_id='".$_SESSION['chef_id']."'");
 					    $count=1;
 					    while($row = mysqli_fetch_array($query,MYSQLI_ASSOC)){
 
